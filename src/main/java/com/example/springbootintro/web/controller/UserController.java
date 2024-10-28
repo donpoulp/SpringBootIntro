@@ -2,6 +2,8 @@ package com.example.springbootintro.web.controller;
 
 import com.example.springbootintro.dao.UserDao;
 import com.example.springbootintro.model.User;
+import io.swagger.v3.oas.annotations.Parameter;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,7 +34,7 @@ public class UserController {
     }
 
     @PutMapping(value = "/user/{id}")
-    public List<User> updateUser(@RequestBody User user,@PathVariable int id) {
+    public List<User> updateUser(@RequestBody User user, @PathVariable int id) {
         return userDao.update(user, id);
     }
 

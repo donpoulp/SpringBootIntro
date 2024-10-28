@@ -1,6 +1,7 @@
 package com.example.springbootintro.dao;
 
 import com.example.springbootintro.model.User;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
